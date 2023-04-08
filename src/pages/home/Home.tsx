@@ -11,10 +11,12 @@ const Home = () => {
         <ModalButton
           description="general"
           onClickFunction={() => changeList('generalPersonList')}
+          active={selectedList === 'generalPersonList'}
         />
         <ModalButton
           description="favorite"
           onClickFunction={() => changeList('favoritePersonList')}
+          active={selectedList === 'favoritePersonList'}
         />
       </ModalButtonsContainer>
       {selectedList && (

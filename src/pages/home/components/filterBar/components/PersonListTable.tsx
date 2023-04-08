@@ -3,6 +3,7 @@ import { SelectedList } from '../../../../../models';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import usePersonListStore from '../../../../../stores/personListStore/personListStore';
+import EmptySearch from '../../EmptySearch';
 
 const PersonListTable = ({ tableType }: { tableType: SelectedList }) => {
   const { generalPersonList, favoritePersonList, addToFavoriteList, removeFromFavoriteList } =
@@ -11,6 +12,7 @@ const PersonListTable = ({ tableType }: { tableType: SelectedList }) => {
     generalPersonList: generalPersonList,
     favoritePersonList: favoritePersonList
   };
+  if (!listSelected[tableType]?.length) return <EmptySearch />;
   return (
     <Table stickyHeader>
       <TableHead>
