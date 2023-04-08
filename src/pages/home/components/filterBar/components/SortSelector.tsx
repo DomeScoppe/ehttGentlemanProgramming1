@@ -1,7 +1,5 @@
 import { MenuItem, Select, Stack } from '@mui/material';
 import usePersonListStore from '../../../../../stores/personListStore/personListStore';
-import { FilterSelector } from './filterSelector';
-import { FilterOptions } from '../../../../../models';
 import sortOptionsInModal from '../../../../../utils/sortOptionsInModal';
 import { SortOption } from '../../../../../models/personListSortOptions';
 
