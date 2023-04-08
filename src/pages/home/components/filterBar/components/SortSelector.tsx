@@ -7,7 +7,7 @@ const SortSelector = () => {
   const { sortOption, sortPersonList } = usePersonListStore();
 
   return (
-    <Stack flex="2">
+    <Stack flex="2.5">
       <Select
         value={sortOption}
         label="order"
